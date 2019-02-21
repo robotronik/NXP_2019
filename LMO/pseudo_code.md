@@ -5,9 +5,7 @@
 correction(unit16 data[128]){
 
 	float K_bruit-blanc = 200;
-
 	double = fc;
-	
 	unit16 data_traite[128];
 	int seuil =  ;
 	for(int i = seuil, i<128-seuil; ++i){
