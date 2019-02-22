@@ -1,0 +1,91 @@
+%% LyX 2.2.2 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage[defaultsans]{droidsans}
+\renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be typewriter style
+\usepackage[T1]{fontenc}
+
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+
+\usepackage{rotating}
+\usepackage{tikz}
+
+\usepackage{dsfont}
+
+\newsavebox{\boxcontents}
+\newsavebox{\boxtitle}
+\newlength{\contentheight} % height of contents
+\newlength{\titlewidth}  % width of title
+\newlength{\boxheight} % height of box (actually width)
+
+\newcommand{\boxpart}[2]{
+\savebox{\boxcontents}{\parbox{\textwidth}{#2}}
+\savebox{\boxtitle}{\large\bfseries #1}
+\settoheight\contentheight{\usebox{\boxcontents}}
+\settowidth\titlewidth{\usebox{\boxtitle}}
+\pgfmathsetlength{\boxheight}{max(2 * \contentheight, \titlewidth + .25cm)}
+%\addtolength{\boxheight}{1cm}
+\begin{tcolorbox}[grow to left by=1cm,enhanced,width=\boxheight,%spread inwards=1cm,%
+adjusted title=\usebox{\boxtitle},halign title=center,halign=right,%
+colbacktitle=black!20!,colframe=black!20!,colback=white,coltitle=black,%
+left=0mm,right=0mm,leftrule=1pt, rightrule=1pt, bottomrule=1pt, rotate=90]
+\begin{turn}{-90}\usebox{\boxcontents}\end{turn}
+\end{tcolorbox}
+}
+
+\makeatother
+
+\usepackage{babel}
+\begin{document}
+{\color{blue!65!green}
+
+\part*{Fiche de mesure : « Loi d'Ohm »}
+
+}
+\thispagestyle{empty}
+
+\boxpart{Introduction}{
+\begin{description}
+\item[Objectif] \emph{[Description courte du pourquoi et du comment de la mesure.]}\\
+{\color{black!40!}Vérification de la loi d'Ohm dans une résistance.}
+\item[Hypothèse] \emph{[Si relevant, quelles sont les relations attenduées entre les grandeurs mesurés ?]}\\
+{\color{black!40!}La loi d'Ohm est donnée par \begin{equation}U=R\cdot I\label{eq:ohm}\end{equation} où $R\,[\Omega]$ est la résistance, $U\,[\mathrm{V}]$ la tension aux bornes de la résistance et $I\,[\mathrm{A}]$ le courant la traversant.}
+\item[Principe de la manipulation] \emph{[Description très sommaire des mesures qui seront effectuées.]}\\
+{\color{black!40!}Mesures simultanées de la tension aux bornes d'une résistance connue et le courant la traversant.}
+\end{description}
+}
+
+\boxpart{Protocole}{
+\begin{description}
+\item[Opérateurs et numéro de paillasse] \emph{[NOM Prénom des opérateurs et numéro de paillasse. Ceci aide en ce qui concerne la traçabilité des erreurs : était-ce du à un apparail défectueux ou plutôt à l'opérateur qui s'y est mal pris ?]}\\ 
+{\color{black!40!}OHM Georg Simon, paillasse 1.}
+\item[Matériel et appareils de mesure] \emph{[Tous les appareils (type et marque, acronyme) et tout le matériel nécessaire à la mesure. Cette partie comprend également un schéma de la mesure.]}\\
+{\color{black!40!}Un multimètre de table TTI 1705 (TTI), un GBF Agilent 33220A (GBF), une résistance de $R=1\,\mathrm{k}\Omega$}
+\item[Mode opératoire] \emph{[Description pas à pas de ce que les opérateurs doivent effectuer comme mesures. Il peut s'avérer utile d'utiliser des acronyms pour référer vers les appareils de la section « Matériel et appareils de mesure ».]}\\
+{\color{black!40!}Le GBF est une source de tension qui délivre une tension de $1\,\mathrm{V}$ continue. L'ampèremètre (TTI) sera mis en série avec un montage en parallèle d'un voltmètre (TTI) et la résistance $R$. Le mode commun du TTI sera le n\oe{}ud qui relie l'ampèremètre, le voltmètre et la résistance (voir schéma en annexe).}
+\end{description}
+}
+
+\boxpart{Observations}{
+\begin{description}
+\item[Mesure] \emph{[Les mesures = grandeurs + unités + incertitudes ; sous forme de table, de graphique, \ldots]}\\{\color{black!40!}$U=0,995\pm 0,003\,\mathrm V$ et $I=1002,3\pm 0,4\,\mathrm{mA}$ et $R=1,00\pm 0,05\,\mathrm k\Omega$. Un calcul sous l'hypothèse de~\eqref{eq:ohm} mène à $\hat R = \frac{U}{I} = 0,993\pm0,003\,\Omega$}
+\item[Description de la mesure] \emph{[Commenter les observations de manière qualitative.]}\\ 
+{\color{black!40!}$V$ est trois ordres de grandeurs plus grand que $I$ ; $\hat R$ est de même ordre de grandeur que $R$.}
+\end{description}
+}
+
+\boxpart{Conclusion}{
+\begin{description}
+\item[Analyse et conclusion] \emph{[Commenter les observation en les mettant dans la perspective de l'objectif.]}\\
+{\color{black!40!}Comme le prédit le modèle, la tension est proportionnelle avec le courant avec une constante de proportionalité égale à la résistance $R$ et les incertitudes de $\hat R$ et de $R$ sont compatibles. Il faudra toutefois plus de mesures avec différentes valeurs pour les résistances pour confirmer si la loi est une généralité ou s'il s'agit ici d'une simple coïncidence.}
+\end{description}
+}
+\end{document}

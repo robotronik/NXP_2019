@@ -1,0 +1,387 @@
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/Arch Linux) (preloaded format=xelatex 2019.2.18)  21 FEB 2019 15:11
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**Troubleshooting_documentation_ROBOTRONIK-PHELMA
+(./Troubleshooting_documentation_ROBOTRONIK-PHELMA.tex
+LaTeX2e <2018-12-01>
+(/usr/share/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2018/09/03 v1.4i Standard LaTeX document class
+(/usr/share/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
+)
+\c@part=\count80
+\c@chapter=\count81
+\c@section=\count82
+\c@subsection=\count83
+\c@subsubsection=\count84
+\c@paragraph=\count85
+\c@subparagraph=\count86
+\c@figure=\count87
+\c@table=\count88
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+
+
+Package inputenc Warning: inputenc package ignored with utf8 based engines.
+
+) (/usr/share/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2018/08/11 v2.0j Standard LaTeX package
+
+(/usr/share/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2018/08/11 v2.0j Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
+)
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 105.
+
+(/usr/share/texmf-dist/tex/latex/lm/t1lmr.fd
+File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+))
+(/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+(/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: xetex.def on input line 99.
+
+(/usr/share/texmf-dist/tex/latex/graphics-def/xetex.def
+File: xetex.def 2017/06/24 v5.0h Graphics/color driver for xetex
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(/usr/share/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2018/04/16 v5.8 Page Geometry
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
+)
+(/usr/share/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/share/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count89
+\Gm@cntv=\count90
+\c@Gm@tempcnt=\count91
+\Gm@bindingoffset=\dimen105
+\Gm@wd@mp=\dimen106
+\Gm@odd@mp=\dimen107
+\Gm@even@mp=\dimen108
+\Gm@layoutwidth=\dimen109
+\Gm@layoutheight=\dimen110
+\Gm@layouthoffset=\dimen111
+\Gm@layoutvoffset=\dimen112
+\Gm@dimlist=\toks17
+)
+(/usr/share/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footer
+s
+\f@nch@headwidth=\skip43
+\f@nch@O@elh=\skip44
+\f@nch@O@erh=\skip45
+\f@nch@O@olh=\skip46
+\f@nch@O@orh=\skip47
+\f@nch@O@elf=\skip48
+\f@nch@O@erf=\skip49
+\f@nch@O@olf=\skip50
+\f@nch@O@orf=\skip51
+)
+(/usr/share/texmf-dist/tex/latex/lipsum/lipsum.sty
+(/usr/share/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2019-02-15 L3 programming layer (loader) 
+
+(/usr/share/texmf-dist/tex/latex/l3kernel/expl3-code.tex
+Package: expl3 2019-02-15 L3 programming layer (code)
+\c_max_int=\count92
+\l_tmpa_int=\count93
+\l_tmpb_int=\count94
+\g_tmpa_int=\count95
+\g_tmpb_int=\count96
+\g__kernel_prg_map_int=\count97
+\c_log_iow=\count98
+\l_iow_line_count_int=\count99
+\l__iow_line_target_int=\count100
+\l__iow_one_indent_int=\count101
+\l__iow_indent_int=\count102
+\c_zero_dim=\dimen113
+\c_max_dim=\dimen114
+\l_tmpa_dim=\dimen115
+\l_tmpb_dim=\dimen116
+\g_tmpa_dim=\dimen117
+\g_tmpb_dim=\dimen118
+\c_zero_skip=\skip52
+\c_max_skip=\skip53
+\l_tmpa_skip=\skip54
+\l_tmpb_skip=\skip55
+\g_tmpa_skip=\skip56
+\g_tmpb_skip=\skip57
+\c_zero_muskip=\muskip10
+\c_max_muskip=\muskip11
+\l_tmpa_muskip=\muskip12
+\l_tmpb_muskip=\muskip13
+\g_tmpa_muskip=\muskip14
+\g_tmpb_muskip=\muskip15
+\l_keys_choice_int=\count103
+\l__intarray_loop_int=\count104
+\c__intarray_sp_dim=\dimen119
+\g__intarray_font_int=\count105
+\c__fp_leading_shift_int=\count106
+\c__fp_middle_shift_int=\count107
+\c__fp_trailing_shift_int=\count108
+\c__fp_big_leading_shift_int=\count109
+\c__fp_big_middle_shift_int=\count110
+\c__fp_big_trailing_shift_int=\count111
+\c__fp_Bigg_leading_shift_int=\count112
+\c__fp_Bigg_middle_shift_int=\count113
+\c__fp_Bigg_trailing_shift_int=\count114
+\g__fp_array_int=\count115
+\l__fp_array_loop_int=\count116
+\l__sort_length_int=\count117
+\l__sort_min_int=\count118
+\l__sort_top_int=\count119
+\l__sort_max_int=\count120
+\l__sort_true_max_int=\count121
+\l__sort_block_int=\count122
+\l__sort_begin_int=\count123
+\l__sort_end_int=\count124
+\l__sort_A_int=\count125
+\l__sort_B_int=\count126
+\l__sort_C_int=\count127
+\l__tl_analysis_normal_int=\count128
+\l__tl_analysis_index_int=\count129
+\l__tl_analysis_nesting_int=\count130
+\l__tl_analysis_type_int=\count131
+\l__regex_internal_a_int=\count132
+\l__regex_internal_b_int=\count133
+\l__regex_internal_c_int=\count134
+\l__regex_balance_int=\count135
+\l__regex_group_level_int=\count136
+\l__regex_mode_int=\count137
+\c__regex_cs_in_class_mode_int=\count138
+\c__regex_cs_mode_int=\count139
+\l__regex_catcodes_int=\count140
+\l__regex_default_catcodes_int=\count141
+\c__regex_catcode_L_int=\count142
+\c__regex_catcode_O_int=\count143
+\c__regex_catcode_A_int=\count144
+\c__regex_all_catcodes_int=\count145
+\l__regex_show_lines_int=\count146
+\l__regex_min_state_int=\count147
+\l__regex_max_state_int=\count148
+\l__regex_left_state_int=\count149
+\l__regex_right_state_int=\count150
+\l__regex_capturing_group_int=\count151
+\l__regex_min_pos_int=\count152
+\l__regex_max_pos_int=\count153
+\l__regex_curr_pos_int=\count154
+\l__regex_start_pos_int=\count155
+\l__regex_success_pos_int=\count156
+\l__regex_curr_char_int=\count157
+\l__regex_curr_catcode_int=\count158
+\l__regex_last_char_int=\count159
+\l__regex_case_changed_char_int=\count160
+\l__regex_curr_state_int=\count161
+\l__regex_step_int=\count162
+\l__regex_min_active_int=\count163
+\l__regex_max_active_int=\count164
+\l__regex_replacement_csnames_int=\count165
+\l__regex_match_count_int=\count166
+\l__regex_min_submatch_int=\count167
+\l__regex_submatch_int=\count168
+\l__regex_zeroth_submatch_int=\count169
+\g__regex_trace_regex_int=\count170
+\c_empty_box=\box27
+\l_tmpa_box=\box28
+\l_tmpb_box=\box29
+\g_tmpa_box=\box30
+\g_tmpb_box=\box31
+\l__box_top_dim=\dimen120
+\l__box_bottom_dim=\dimen121
+\l__box_left_dim=\dimen122
+\l__box_right_dim=\dimen123
+\l__box_top_new_dim=\dimen124
+\l__box_bottom_new_dim=\dimen125
+\l__box_left_new_dim=\dimen126
+\l__box_right_new_dim=\dimen127
+\l__box_internal_box=\box32
+\l__coffin_internal_box=\box33
+\l__coffin_internal_dim=\dimen128
+\l__coffin_offset_x_dim=\dimen129
+\l__coffin_offset_y_dim=\dimen130
+\l__coffin_x_dim=\dimen131
+\l__coffin_y_dim=\dimen132
+\l__coffin_x_prime_dim=\dimen133
+\l__coffin_y_prime_dim=\dimen134
+\c_empty_coffin=\box34
+\l__coffin_aligned_coffin=\box35
+\l__coffin_aligned_internal_coffin=\box36
+\l_tmpa_coffin=\box37
+\l_tmpb_coffin=\box38
+\g_tmpa_coffin=\box39
+\g_tmpb_coffin=\box40
+\c__coffin_empty_coffin=\box41
+\l__coffin_display_coffin=\box42
+\l__coffin_display_coord_coffin=\box43
+\l__coffin_display_pole_coffin=\box44
+\l__coffin_display_offset_dim=\dimen135
+\l__coffin_display_x_dim=\dimen136
+\l__coffin_display_y_dim=\dimen137
+\g__file_internal_ior=\read1
+\l__coffin_bounding_shift_dim=\dimen138
+\l__coffin_left_corner_dim=\dimen139
+\l__coffin_right_corner_dim=\dimen140
+\l__coffin_bottom_corner_dim=\dimen141
+\l__coffin_top_corner_dim=\dimen142
+\l__coffin_scaled_total_height_dim=\dimen143
+\l__coffin_scaled_width_dim=\dimen144
+)
+(/usr/share/texmf-dist/tex/latex/l3kernel/l3xdvipdfmx.def
+File: l3xdvipdfmx.def 2019-02-15 v L3 Experimental driver: xdvipdfmx
+\g__driver_image_int=\count171
+\g__driver_pdf_object_int=\count172
+))
+(/usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2018-10-17 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count173
+\g__xparse_grabber_int=\count174
+\l__xparse_m_args_int=\count175
+\l__xparse_mandatory_args_int=\count176
+\l__xparse_v_nesting_int=\count177
+)
+Package: lipsum 2019/01/02 v2.2 150 paragraphs of Lorem Ipsum dummy text
+
+(/usr/share/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex
+File: lipsum.ltd.tex 2019/01/02 v2.2 The Lorem ipsum dummy text
+))
+(./Troubleshooting_documentation_ROBOTRONIK-PHELMA.aux)
+\openout1 = `Troubleshooting_documentation_ROBOTRONIK-PHELMA.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+*geometry* verbose mode - [ preamble ] result:
+* driver: xetex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(56.9055pt, 500.484pt, 56.9055pt)
+* v-part:(T,H,B)=(56.9055pt, 681.15898pt, 56.9055pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=500.484pt
+* \textheight=681.15898pt
+* \oddsidemargin=-15.36449pt
+* \evensidemargin=-15.36449pt
+* \topmargin=-52.36449pt
+* \headheight=65.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 45.
+(/usr/share/texmf-dist/tex/latex/lm/omslmr.fd
+File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 45.
+
+
+(/usr/share/texmf-dist/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 45.
+File: tinballs.jpg Graphic file (type bmp)
+<tinballs.jpg>
+File: logo_phelma.jpg Graphic file (type bmp)
+<logo_phelma.jpg>
+File: logoclub.jpg Graphic file (type bmp)
+<logoclub.jpg>
+
+
+Package Fancyhdr Warning: \headheight is too small (65.0pt): 
+Make it at least 75.66359pt.
+We now make it that large for the rest of the document.
+This may cause the page layout to be inconsistent, however.
+
+[1
+
+]
+File: corner.jpg Graphic file (type bmp)
+<corner.jpg>
+File: camera.jpg Graphic file (type bmp)
+<camera.jpg>
+File: logo_phelma.jpg Graphic file (type bmp)
+<logo_phelma.jpg>
+File: logoclub.jpg Graphic file (type bmp)
+<logoclub.jpg>
+ [2]
+File: wheel.jpg Graphic file (type bmp)
+<wheel.jpg>
+File: logo_phelma.jpg Graphic file (type bmp)
+<logo_phelma.jpg>
+File: logoclub.jpg Graphic file (type bmp)
+<logoclub.jpg>
+ [3]
+File: logo_phelma.jpg Graphic file (type bmp)
+<logo_phelma.jpg>
+File: logoclub.jpg Graphic file (type bmp)
+<logoclub.jpg>
+ [4] (./Troubleshooting_documentation_ROBOTRONIK-PHELMA.aux) ) 
+Here is how much of TeX's memory you used:
+ 10960 strings out of 492933
+ 208034 string characters out of 6138667
+ 417572 words of memory out of 5000000
+ 14988 multiletter control sequences out of 15000+600000
+ 547658 words of font info for 31 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 32i,12n,43p,322b,446s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on Troubleshooting_documentation_ROBOTRONIK-PHELMA.pdf (4 pages)
+.

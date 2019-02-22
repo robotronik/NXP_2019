@@ -18,13 +18,18 @@ correction(unit16 data[128]){
 
 # Trajectoire
 
+
 # Régulation
 regulation(vitess, delta_l, delta_r){
 	
 	delta = moyenne(delta_l, delta_r);
 
-	var= (delta_prece/delta) K;
+	var= (delta_prece/delta) K_v;
 
 	vit_new = vitesse var;
 }
+
+# DDL
+
+4 : K, seuil, fc, K_v
 
