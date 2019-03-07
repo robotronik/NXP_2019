@@ -9,17 +9,18 @@ correction(unit16 data[128]){
 	double = fc;
 	int seuil =  5 ;
 	unit16 data_traite[128- 2 seuil];
+	uint16 b = (127/2) - seuil;
 	for(int i = seuil, i<128-seuil; ++i){
 	fc = 6,27e-6*i^4 - 0,01434*i^3 + 0,151*i^2 -5,794*i + 24,94; //les facteurs sront à déterminer par nous meme
 	data_trate[i] = data[i]*K_bruit-blanc / fc;
-	//calculer b (mileu de la piste)
+	
 	}
-	return data_traite, taille(data_traite);
+	return data_traite, taille(data_traite), b;
 }
 
 # Trajectoire
 
-val_erreur(l[n], r[n], b, e[n]){
+val_erreur(l[n], r[n], b, e[m]){
 	
 	err = abs(((l-r)/2)-b);
 	put(err, e[n]);
@@ -27,12 +28,12 @@ val_erreur(l[n], r[n], b, e[n]){
 
 }
 
-trajectoire(e[n]){
+trajectoire(e[m]){
 	
 	t = 0;
 	t+=Kp e[0];
 	t+= Kd(e[0]-e[1]);
-	for(i = 0; i<n; ++i) t+= e[i]*Ki;
+	for(i = 0; i<m; ++i) t+= e[i]*Ki;
 	return t;
  
 }
@@ -134,5 +135,5 @@ uint16 detect(y[n], data_trait[?]){
 
 # DDL
 
-9 : {K_bruit-blanc, seuil, fc}, {vmax, vmin}, !!!!! {Kp, Ki, Kd}, n !!!!!
+12 : {K_bruit-blanc, seuil, fc}, {vmax, vmin}, !!!!! {Kp, Ki, Kd}, n(degrès polynome), m(longueur intégration)!!!!! {rech_seuil, detect_seuil}
 
