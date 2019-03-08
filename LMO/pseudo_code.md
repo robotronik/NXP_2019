@@ -110,7 +110,6 @@ void detection(x[n], data_trait[?], (adr)l[n], (adr)r[n]){
 uint16 detect(y[n], data_trait[?]){
 	
 	int rech_seuil = 15, i;
-	if(y[0]<rech_seuil || y[0]>n - rech_seuil)
 	if(y[0]<rech_seuil){
 		for(i=0; i<y[0]+rech_seuil+1; ++i){
 			if(data_trait[y[0]+i] < detect_seuil) break;
