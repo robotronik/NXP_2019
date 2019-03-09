@@ -1,7 +1,7 @@
 float * put(float val, float *table, int size);
 void xupdate(float *x, int size, float vel, float fps);
-float * ck(float *x, float *y, int sizexy);
-void newton(float *x, float *y, int sizexy);
+float * ck(float *x, float *y, int n);
+void newton(float *x, float *y, int n);
 void detection(float *x, int sizexy, uint16 *data_trait, int sizedat, uint16 *l, uint16 *r, int sizelr);
 void detect(float * y, int sizexy, uint16 data_trait);
 uint16 correction(uint16 data[128], double *data_trait, int *sizedat);
