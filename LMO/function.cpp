@@ -15,7 +15,7 @@ void xupdate(float *x, int sizexy, float vel, float fps){ //to check
 	x = put(x_suiv, x, sizexy);
 }
 
-float * ck(float x, float y, int sizexy){
+float * ck(float *x, float *y, int sizexy){ //to check
 	float c[sizexy], temp;
 	for(k=1; k<=sizexy; ++k){
 		c[k] = 0;
@@ -30,17 +30,17 @@ float * ck(float x, float y, int sizexy){
 	return c;
 }
 
-void newton(x[n], y[n]){
-	N = y[n];
-	c[n] = ck(x[n], y[n]);
-	for(int i = 1; i <= n; ++i){
+void newton(float *x, float *y, int sizexy){ //to check
+	N = y[0];
+	float * c[sizexy] = ck(x, y, sizexy), temp;
+	for(int i = 1; i <= sizexy; ++i){
 		temp = c[i]; 
 		for(int j =0; j<i; ++j){
 			temp*=(x[0] - x[j]);
 		}
 		N+=temp;
 	}
-	put(N, y[n]);
+	put(N, y, sizexy);
 }
 
 void detection(float *x, int sizexy, uint16 *data_trait, int sizedat, uint16 *l, uint16 *r, int sizelr){ //to check
