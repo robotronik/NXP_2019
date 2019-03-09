@@ -1,6 +1,6 @@
 #include "function.h"
 
-float * put(void* val, void* *table, int size){ //to check
+float * put(void* val, void* *table, int size){ //checked
 	float buf;
 	for(i = 1; i<size; ++i){
 		buf = table[i-1];
@@ -10,14 +10,14 @@ float * put(void* val, void* *table, int size){ //to check
 	return table;
 }
 
-void xupdate(float *x, int sizexy, float vel, float fps){ //to check
+void xupdate(float *x, int sizexy, float vel, float fps){ //checked
 	float x_suiv = fps*vel+x[0];
 	x = put(x_suiv, x, sizexy);
 }
 
-float * ck(float *x, float *y, int sizexy){ //to check
-	float c[sizexy], temp;
-	for(k=1; k<=sizexy; ++k){
+float * ck(float *x, float *y, int n){ //to check une deuxieme fois
+	float c[n+1], temp;
+	for(k=1; k<=n; ++k){
 		c[k] = 0;
 		for(j = 0; j<=k; ++j){
 			temp = y[j];
@@ -30,17 +30,17 @@ float * ck(float *x, float *y, int sizexy){ //to check
 	return c;
 }
 
-void newton(float *x, float *y, int sizexy){ //to check
+void newton(float *x, float *y, int n){ //to check une deuxieme fois
 	N = y[0];
-	float * c[sizexy] = ck(x, y, sizexy), temp;
-	for(int i = 1; i <= sizexy; ++i){
+	float * c[n+1] = ck(x, y, n), temp;
+	for(int i = 1; i <= n; ++i){
 		temp = c[i]; 
 		for(int j =0; j<i; ++j){
 			temp*=(x[0] - x[j]);
 		}
 		N+=temp;
 	}
-	put(N, y, sizexy);
+	put(N, y, n+1);
 }
 
 void detection(float *x, int sizexy, double *data_trait, int sizedat, uint16 *l, uint16 *r, int sizelr){ //to check
