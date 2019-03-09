@@ -45,7 +45,7 @@ regulation_vitesse(vmax, vmin, e[0]){
 
 }
 
-float * put(val, table[n]){
+float * put(val, table[n]){ //fait
 	
 	for(i = 1; i<n; ++i){
 		buf = table[i-1];
@@ -56,14 +56,14 @@ float * put(val, table[n]){
 
 }
 
-void xupdate(x[n], vel, fps){
+void xupdate(x[n], vel, fps){ //fait
 	
 	x_suiv = fps*vel+x[0];
 	put(x_suiv, x[n]);
 
 }
 
-void newton(x[n], y[n]){
+void newton(x[n], y[n]){ //fait
 
 	N = y[n];
 	c[n] = ck(x[n], y[n]);
@@ -79,7 +79,7 @@ void newton(x[n], y[n]){
 }
 
 
-float * ck(x[n], y[n]){
+float * ck(x[n], y[n]){ //fait
 	
 	float c[n];
 	for(k=1; k<=n; ++k){
@@ -95,7 +95,7 @@ float * ck(x[n], y[n]){
 	return c;
 }
 
-void detection(x[n], data_trait[?], (adr)l[n], (adr)r[n]){
+void detection(x[n], data_trait[?], (adr)l[n], (adr)r[n]){ //fait
 	
 	xupdate(x[n], vel, fps);
 	if(detect(l[n], data_trait[?]) >= 0 ) put(detect(l[n], data_trait[?]), l[n]);
@@ -107,7 +107,7 @@ void detection(x[n], data_trait[?], (adr)l[n], (adr)r[n]){
 
 }
 
-uint16 detect(y[n], data_trait[?]){
+uint16 detect(y[n], data_trait[?]){ //fait
 	
 	int rech_seuil = 15, i;
 	if(y[0]<rech_seuil){
