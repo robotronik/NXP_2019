@@ -52,7 +52,7 @@ void detection(float *x, int sizexy, double *data_trait, int sizedat, uint16 *l,
 	else r = put(newton(x, r), r, sizelr);
 }
 
-void detect(float * y, int sizexy, double data_trait){ //to check
+int detect(float * y, int sizexy, double * data_trait){ //checked type data trait, retour int
 	int rech_seuil = 15, i;
 	if(y[0]<rech_seuil){
 		for(i=0; i<y[0]+rech_seuil+1; ++i){
@@ -69,8 +69,14 @@ void detect(float * y, int sizexy, double data_trait){ //to check
 			if(data_trait[y[0]+i] < detect_seuil) break;
 		}
 	}
-	if(i<rech_seuil+1) put(i, y, sizexy);
-	else put(-1, y, sizexy);
+	if(i<rech_seuil+1){
+		put(y[0]+i, y, sizexy);
+		return y[0]+i;
+	}
+	else{
+		put(-1, y, sizexy);
+		return -1;
+	}
 }
 
 uint16 correction(uint16 data[128], double *data_trait, int *sizedat){
