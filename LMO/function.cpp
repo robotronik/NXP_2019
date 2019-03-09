@@ -1,7 +1,8 @@
 #include "function.h"
 
-float * put(uint16 val, uint16 *table, uint16 size_of_table){
-	for(i = 1; i<size_of_table; ++i){
+float * put(float val, float *table, int size){ //to check
+	float buf;
+	for(i = 1; i<size; ++i){
 		buf = table[i-1];
 		table[i] = buf;
 	}
@@ -9,45 +10,14 @@ float * put(uint16 val, uint16 *table, uint16 size_of_table){
 	return table;
 }
 
-void xupdate(uint16 *x, uint16 size_of_x, uint16 vel, uint16 fps){
-	uint16 x_suiv = fps*vel+x[0];
-	put(x_suiv, x, size_of_x);
+void xupdate(float *x, int sizexy, float vel, float fps){ //to check
+	float x_suiv = fps*vel+x[0];
+	x = put(x_suiv, x, sizexy);
 }
 
-uint16 detect(uint16 *y, uint16 *data_trait, uint16 size_of_y, uint16 size_of_data_trait){
-	int rech_seuil = 15, i;
-	if(y[0]<rech_seuil){
-		for(i=0; i<y[0]+rech_seuil+1; ++i){
-			if(data_trait[y[0]+i] < detect_seuil) break;
-		}
-	}
-	else if (y[0]>size_of_y - rech_seuil){
-		for(i=y[0]-rech_seuil; i<size_of_y; ++i){
-			if(data_trait[y[0]+i] < detect_seuil) break;
-		}
-	}
-	else{
-		for(i=-resc_seuil; i<rech_seuil+1; ++i){
-			if(data_trait[y[0]+i] < detect_seuil) break;
-		}
-	}
-	if(i<rech_seuil+1) put(i, y, size_of_y);
-	else put(-1, y, size_of_y);
-}
-
-void detection(uint16 *x, uint16 size_of_x, uint16 *data_trait, uint16 size_of_data_trait, uint16 *l, uint16 size_of_l, uint16 *r, uint16 size_of_r){
-	xupdate(x, size_of_x, vel, fps);
-	if(detect(l, data_trait, size_of_l, size_of_data_trait) >= 0 ) put(detect(l, data_trait, size_of_l, size_of_data_trait), l[n]);
-	else put(newton(x[n], l[n]), l[n]);
-
-	if(detect(r[n], data_trait[?]) >= 0 ) put(detect(r[n], data_trait[?]), r[n]);
-	else put(newton(x, r, size_of_r), r, size_of_r);
-}
-
-
-float * ck(uint16 *x, uint16 *y, uint16 size){
-	float c[size], temp;
-	for(k=1; k<=size; ++k){
+float * ck(float x, float y, int sizexy){
+	float c[sizexy], temp;
+	for(k=1; k<=sizexy; ++k){
 		c[k] = 0;
 		for(j = 0; j<=k; ++j){
 			temp = y[j];
@@ -60,15 +30,48 @@ float * ck(uint16 *x, uint16 *y, uint16 size){
 	return c;
 }
 
-void newton(uint16 *x, uint16 *y, uint16 size){
-	unint16 N = y[0];
-	float * c[size] = ck(x, y, size), temp;
-	for(int i = 1; i <= size; ++i){
+void newton(x[n], y[n]){
+	N = y[n];
+	c[n] = ck(x[n], y[n]);
+	for(int i = 1; i <= n; ++i){
 		temp = c[i]; 
 		for(int j =0; j<i; ++j){
 			temp*=(x[0] - x[j]);
 		}
 		N+=temp;
 	}
-	put(N, y, size);
+	put(N, y[n]);
 }
+
+void detection(float *x, int sizexy, uint16 *data_trait, int sizedat, uint16 *l, uint16 *r, int sizelr){ //to check
+	xupdate(x, sizexy, vel, fps);
+	if(detect(l, data_trait) >= 0 ) l = put(detect(l, data_trait), l, sizelr);
+	else l = put(newton(x, l), l);
+
+	if(detect(r, data_trait) >= 0 ) r = put(detect(r, data_trait), r, sizelr);
+	else r = put(newton(x, r), r, sizelr);
+}
+
+void detect(float * y, int sizexy, uint16 data_trait){ //to check
+	int rech_seuil = 15, i;
+	if(y[0]<rech_seuil){
+		for(i=0; i<y[0]+rech_seuil+1; ++i){
+			if(data_trait[y[0]+i] < detect_seuil) break;
+		}
+	}
+	else if (y[0]>sizexy - rech_seuil){
+		for(i=y[0]-rech_seuil; i<sizexy; ++i){
+			if(data_trait[y[0]+i] < detect_seuil) break;
+		}
+	}
+	else{
+		for(i=-rech_seuil; i<rech_seuil+1; ++i){
+			if(data_trait[y[0]+i] < detect_seuil) break;
+		}
+	}
+	if(i<rech_seuil+1) put(i, y, sizexy);
+	else put(-1, y, sizexy);
+}
+
+
+
