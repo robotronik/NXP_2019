@@ -43,7 +43,7 @@ void newton(float *x, float *y, int n){ //to check une deuxieme fois
 	put(N, y, n+1);
 }
 
-void detection(float *x, int sizexy, double *data_trait, int sizedat, uint16 *l, uint16 *r, int sizelr){ //to check
+void detection(float *x, int sizexy, double *data_trait, int sizedat, uint16 *l, uint16 *r, int sizelr){ //checked
 	xupdate(x, sizexy, vel, fps);
 	if(detect(l, data_trait) >= 0 ) l = put(detect(l, data_trait), l, sizelr);
 	else l = put(newton(x, l), l);
@@ -79,30 +79,31 @@ int detect(float * y, int sizexy, double * data_trait){ //checked type data trai
 	}
 }
 
-uint16 correction(uint16 data[128], double *data_trait, int *sizedat){
+uint16 correction(uint16 data[128], double *data_trait, int *sizedat){//checked
 	float K_bruit-blanc = 200;
 	double = fc, coefffc[5]= {24.94, 5.794, 0.151, 0.01434, 6.27e-6} //les facteurs seront à déterminer par nous meme
 	int seuil =  5 , *sizedat = 128-2*seuil;
-	double data_traite[*sizedat];
+	double data_trait[*sizedat];
 	uint16 b = (127/2) - seuil;
 	for(int i = seuil, i<128-seuil; ++i){
 	double fc = coefffc[4]*i*i*i*i - coefffc[3]*i*i*i + coefffc[2]*i*i -coefffc[1]*i + coefffc[0]; 
-	data_trate[i] = data[i]*K_bruit-blanc / fc;
+	data_trait[i] = data[i]*K_bruit-blanc / fc;
 	
 	}
 	return b; //data_traite, taille(data_traite), 
 }
 
-void val_erreur(uint16 *l, uint16 *r, int sizelr, uint16 b,  double *e, int sizee){ //to check
+void val_erreur(uint16 *l, uint16 *r, int sizelr, uint16 b,  double *e, int sizee){ //checked
 	double err = abs(((l-r)/2)-b);
 	put(err, e, sizee);
 }
 
-float regulation_vitesse(float vmax, float vmin, double e){ //to check
-	float v = vmax - ((vmax-vmin)/b) e; //ici e = e[0]
+float regulation_vitesse(float vmax, float vmin, double e){ //checked retour ajoute
+	float v = vmax - ((vmax-vmin)/b) * e; //ici e = e[0]
+	return v;
 }
 
-float trajectoire(double *e, int sizee){ //to check
+float trajectoire(double *e, int sizee){ //check
 	float t = 0;
 	t+=Kp e[0];
 	t+= Kd(e[0]-e[1]);
