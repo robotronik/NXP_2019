@@ -1,6 +1,6 @@
 #include "function.h"
 
-float * put(float val, float *table, int size){ //to check
+float * put(void* val, void* *table, int size){ //to check
 	float buf;
 	for(i = 1; i<size; ++i){
 		buf = table[i-1];
@@ -43,7 +43,7 @@ void newton(float *x, float *y, int sizexy){ //to check
 	put(N, y, sizexy);
 }
 
-void detection(float *x, int sizexy, uint16 *data_trait, int sizedat, uint16 *l, uint16 *r, int sizelr){ //to check
+void detection(float *x, int sizexy, double *data_trait, int sizedat, uint16 *l, uint16 *r, int sizelr){ //to check
 	xupdate(x, sizexy, vel, fps);
 	if(detect(l, data_trait) >= 0 ) l = put(detect(l, data_trait), l, sizelr);
 	else l = put(newton(x, l), l);
@@ -52,7 +52,7 @@ void detection(float *x, int sizexy, uint16 *data_trait, int sizedat, uint16 *l,
 	else r = put(newton(x, r), r, sizelr);
 }
 
-void detect(float * y, int sizexy, uint16 data_trait){ //to check
+void detect(float * y, int sizexy, double data_trait){ //to check
 	int rech_seuil = 15, i;
 	if(y[0]<rech_seuil){
 		for(i=0; i<y[0]+rech_seuil+1; ++i){
@@ -73,30 +73,30 @@ void detect(float * y, int sizexy, uint16 data_trait){ //to check
 	else put(-1, y, sizexy);
 }
 
-correction(unit16 data[128]){
+uint16 correction(uint16 data[128], double *data_trait, int *sizedat){
 	float K_bruit-blanc = 200;
-	double = fc;
-	int seuil =  5 ;
-	unit16 data_traite[128- 2 seuil];
+	double = fc, coefffc[5]= {24.94, 5.794, 0.151, 0.01434, 6.27e-6} //les facteurs seront à déterminer par nous meme
+	int seuil =  5 , *sizedat = 128-2*seuil;
+	double data_traite[*sizedat];
 	uint16 b = (127/2) - seuil;
 	for(int i = seuil, i<128-seuil; ++i){
-	fc = 6,27e-6*i^4 - 0,01434*i^3 + 0,151*i^2 -5,794*i + 24,94; //les facteurs seront à déterminer par nous meme
+	double fc = coefffc[4]*i*i*i*i - coefffc[3]*i*i*i + coefffc[2]*i*i -coefffc[1]*i + coefffc[0]; 
 	data_trate[i] = data[i]*K_bruit-blanc / fc;
 	
 	}
-	return data_traite, taille(data_traite), b;
+	return b; //data_traite, taille(data_traite), 
 }
 
-void val_erreur(unit16 *l, unit16 *r, int sizelr, uint16 b,  unit16 *e, int sizee){ //to check
-	uint16 err = abs(((l-r)/2)-b);
+void val_erreur(uint16 *l, uint16 *r, int sizelr, uint16 b,  double *e, int sizee){ //to check
+	double err = abs(((l-r)/2)-b);
 	put(err, e, sizee);
 }
 
-float regulation_vitesse(float vmax, float vmin, unit16 e){ //to check
+float regulation_vitesse(float vmax, float vmin, double e){ //to check
 	float v = vmax - ((vmax-vmin)/b) e; //ici e = e[0]
 }
 
-float trajectoire(unit16 *e, int sizee){ //to check
+float trajectoire(double *e, int sizee){ //to check
 	float t = 0;
 	t+=Kp e[0];
 	t+= Kd(e[0]-e[1]);
