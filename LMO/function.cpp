@@ -96,11 +96,11 @@ float regulation_vitesse(float vmax, float vmin, unit16 e){ //to check
 	float v = vmax - ((vmax-vmin)/b) e; //ici e = e[0]
 }
 
-trajectoire(e[m]){
-	t = 0;
+float trajectoire(unit16 *e, int sizee){ //to check
+	float t = 0;
 	t+=Kp e[0];
 	t+= Kd(e[0]-e[1]);
-	for(i = 0; i<m; ++i) t+= e[i]*Ki;
+	for(i = 0; i<sizee; ++i) t+= e[i]*Ki;
 	return t;
 }
 

@@ -7,3 +7,4 @@ void detect(float * y, int sizexy, uint16 data_trait);
 // correction
 void val_erreur(unit16 *l, unit16 *r, int sizelr, uint16 b,  unit16 *e, int sizee);
 float regulation_vitesse(float vmax, float vmin, unit16 e);
+float trajectoire(unit16 *e, int sizee);
