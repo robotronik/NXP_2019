@@ -13,6 +13,6 @@
 
 void initToolkitServo();
 
-void setServoPWM(float dir);
+void setServoPWM(float dir);// between -+1
 void setServoPWMDebug(float periodMin, float periodMax);
 void testServo(float maxDir);//sweep
