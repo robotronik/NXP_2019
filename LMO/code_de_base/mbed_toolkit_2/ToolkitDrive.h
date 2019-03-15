@@ -14,9 +14,9 @@
 #define B 59 //Milieu de data_trait
 #define VMAX 100
 #define VMIN (float) 0.1
-#define KP
-#define KD
-#define KI
+#define KP 1
+#define KD 0
+#define KI 0
 #define SIZE_LR 5
 #define SIZE_X 5
 #define SIZE_E 3
