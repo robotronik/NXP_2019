@@ -50,7 +50,7 @@ void init(){
         correction(data[128],data_trait);
         detection(x,data_trait,l,r,vel);
     }
-    vel = VMIN * v_max;
+    vel = 0.02;
     traj = 0;
     setServoPWM(traj);
     setMotorPWM(vel,vel);
